@@ -1238,6 +1238,35 @@ export const tokens: Token[] = [
       },
     ],
   },
+  {
+    name: "MNTA",
+    address: "secret15rxfz2w2tallu9gr9zjxj8wav2lnz4gl9pjccj",
+    code_hash:
+      "0x5a085bd8ed89de92b35134ddd12505a602c7759ea25fb5c089ba03c8535b3042",
+    image: "/mnta.svg",
+    decimals: 6,
+    coingecko_id: "kujira",
+    deposits: [
+      {
+        chain_name: "Kujira",
+        from_denom: "umnta",
+      },
+    ],
+    withdrawals: [
+      {
+        chain_name: "Kujira",
+        from_denom: ibcDenom(
+          [
+            {
+              incomingChannelId: chains["Kujira"].withdraw_channel_id,
+              incomingPortId: "transfer",
+            },
+          ],
+          "umnta"
+        ),
+      },
+    ],
+  },
   /* {
     name: "ROWAN",
     address: "secret159p22zvq2wzsdtqhm2plp4wg33srxp2hf0qudc",
